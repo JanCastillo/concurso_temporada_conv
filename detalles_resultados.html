@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Concurso Temporada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="javascript:start()">
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Posiciones
+          </a>
+          <a class="navbar-brand" href="index.html">Detalle de Puntos
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>Concurso de Temporada</h1>
+      <p>Noviembre - Diciembre</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Selecciona una Ruta</label>
+                        <br><br>
+                        <select class="form-control" id="rutafilter">
+                        </select>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="date">Selecciona un PDV</label>
+                        <br><br>
+                        <select class="form-control" id="pdvfilter">                                                 
+                        </select>
+                      </li>  
+                    </ul>
+                  </div>
+                  <button id="reset-btn" type="button" class="btn btn-default" onclick="getrutas()">Reset</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div style="overflow-x:auto;">
+            <div id="table-area" class="">
+              <table id="results-table" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="table-head">PDV</th>
+                    <th class="table-head">Ruta</th>
+                    <th class="table-head">Semana</th>
+                    <th class="table-head">TP Whisky</th>
+                    <th class="table-head">TP Tequila</th>
+                    <th class="table-head">TP Rum</th>
+                    <th class="table-head">TP Vodka</th>
+                    <th class="table-head">Total</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Website by Jan Castillo</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="score_conv.js"></script>
+  <script src="static_score.js"></script>
+</body>
+
+</html>
